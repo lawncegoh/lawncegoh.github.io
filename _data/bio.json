@@ -7,8 +7,7 @@
     "phone": "+65 96916575",
     "website": "https://lawncegoh.github.io",
     "summary": "I am studying for a Bachelors of Computing with major of Computer Science in the School of Computing at the National University of Singapore.",
-      "countryCode": "Singapore"
-    },
+      "countryCode": "Singapore",
     "profiles": [
       {
         "network": "github",
@@ -20,7 +19,8 @@
         "username": "lawncegoh",
         "url": "https://www.linkedin.com/in/lawnce-goh/"
       }
-    ],
+    ]
+  },
   "interests": [
     {
       "name": "Big Data",
@@ -37,8 +37,7 @@
       "keywords": [
         "RSA",
         "AES",
-        "Cryptography",
-        ""
+        "Cryptography"
       ]
     }
   ],
