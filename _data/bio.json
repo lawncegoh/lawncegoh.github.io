@@ -1,13 +1,12 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Lawnce Goh",
     "label": "Student",
     "picture": "https://techfolios.github.io/template/images/molly.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
-    "location": {
+    "email": "lawnce_goh@u.nus.edu",
+    "phone": "+65 96916575",
+    "website": "https://lawncegoh.github.io",
+    "summary": "I am studying for a Bachelors of Computing with major of Computer Science in the School of Computing at the National University of Singapore.
       "address": "",
       "postalCode": "96822",
       "city": "Honolulu",
@@ -17,42 +16,34 @@
     "profiles": [
       {
         "network": "github",
-        "username": "mmaluhia",
-        "url": "http://github.com/changeme"
+        "username": "lawncegoh",
+        "url": "http://github.com/lawncegoh"
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
-      },
-      {
-        "network": "twitter",
-        "username": "mollymal",
-        "url": "http://twitter.com/changeme"
-      },
-      {
-        "network": "instagram",
-        "username": "molly",
-        "url": "http://instagram.com/changeme"
+        "username": "lawncegoh",
+        "url": "https://www.linkedin.com/in/lawnce-goh/"
       }
     ]
   },
   "interests": [
     {
-      "name": "internet of things",
+      "name": "Big Data",
       "keywords": [
-        "Arduino",
-        "TI MSP430"
+        "Hadoop",
+        "Spark",
+        "SQL",
+        "PostgreSQL",
+        "Redis"
       ]
     },
     {
-      "name": "data mining",
+      "name": "Cybersecurity",
       "keywords": [
-      ]
-    },
-    {
-      "name": "artificial intelligence",
-      "keywords": [
+        "RSA",
+        "AES",
+        "Cryptography",
+        ""
       ]
     }
   ],
@@ -62,11 +53,11 @@
       "level": "",
       "keywords": [
         "C",
-        "C++",
         "Java",
         "Javascript",
-        "Assembly",
-        "Common Lisp"
+        "Python",
+        "HTML",
+        "CSS"
       ]
     },
     {
@@ -77,18 +68,18 @@
         "Ubuntu",
         "Git/GitHub",
         "g++",
-        "TI LaunchPad"
+        "Intellij",
+        "vim",
+        "Docker"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
-      "gpa": "",
+      "institution": "National University of Singapore",
+      "area": "Computer Science (expected May, 2022)",
+      "studyType": "Bachelor of Computing",
+      "startDate": "August 2018",
       "courses": [
       ]
     }
