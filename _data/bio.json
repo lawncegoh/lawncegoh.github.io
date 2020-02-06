@@ -7,11 +7,7 @@
     "phone": "+65 96916575",
     "website": "https://lawncegoh.github.io",
     "summary": "I am studying for a Bachelors of Computing with major of Computer Science in the School of Computing at the National University of Singapore.",
-      "address": "",
-      "postalCode": "96822",
-      "city": "Honolulu",
-      "countryCode": "USA",
-      "region": "Hawaii"
+      "countryCode": "Singapore"
     },
     "profiles": [
       {
@@ -24,8 +20,7 @@
         "username": "lawncegoh",
         "url": "https://www.linkedin.com/in/lawnce-goh/"
       }
-    ]
-  },
+    ],
   "interests": [
     {
       "name": "Big Data",
