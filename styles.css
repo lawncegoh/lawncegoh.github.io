@@ -1,0 +1,159 @@
+/* Base colors: Dark mode with lighter blue accents */
+:root {
+  --bg-color: #1f2533;
+  --surface-color: #272e40;
+  --accent-color: #4c74c9;
+  --text-color: #e0e6f3;
+  --muted-text: #b2bad1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: var(--surface-color);
+  padding: 2rem 1.5rem;
+}
+
+.brand {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: var(--muted-text);
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/* Main content */
+.content {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* Stats cards */
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  background: var(--surface-color);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+/* Services cards */
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.service {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 250px;
+}
+
+/* Skills bars */
+.skills-grid {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.bar {
+  background: #3a425c;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 6px;
+  background: var(--accent-color);
+}
+
+/* Projects */
+.project-card {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.project-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
