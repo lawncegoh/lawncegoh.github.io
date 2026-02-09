@@ -2,6 +2,13 @@ import type { Project } from '@/components/projects/projects-grid';
 
 export const tradingProjects: Project[] = [
   {
+    title: 'vol_drift_sol (SOL-PERP vol burst bot)',
+    summary:
+      'A small-perps MVP that reads Binance 4h candles, detects quiet→burst volatility and Donchian breakouts, then executes capped SOL-PERP trades on Drift with DRY_RUN and an autorun + terminal dashboard for monitoring.',
+    stack: ['TypeScript', 'Drift', 'Binance OHLCV', 'TUI'],
+    status: 'Live MVP'
+  },
+  {
     title: 'crypto_dispersion (vol research workbench)',
     summary:
       'Systematic research sandbox for volatility / breakout-style strategies, grid-search, and robustness checks (Monte Carlo).',
