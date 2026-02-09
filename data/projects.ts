@@ -6,21 +6,18 @@ export const tradingProjects: Project[] = [
     summary:
       'Systematic research sandbox for volatility / breakout-style strategies, grid-search, and robustness checks (Monte Carlo).',
     stack: ['Rust', 'Python', 'Backtesting', 'Monte Carlo'],
-    link: 'https://github.com/lawncegoh/crypto_dispersion',
     status: 'Active'
   },
   {
     title: 'HFT Order Book (C++ + Python wrapper)',
     summary: 'A low-latency limit order book implementation with a Python wrapper for experimentation.',
     stack: ['C++', 'Python', 'Market microstructure'],
-    link: 'https://github.com/lawncegoh',
     status: 'Open-source'
   },
   {
     title: 'QuantConnect Lean (fork)',
     summary: 'Explorations using Leans algorithmic trading engine patterns (research  backtest  deploy).',
     stack: ['C#', 'Python', 'Lean'],
-    link: 'https://github.com/lawncegoh',
     status: 'Learning'
   }
 ];
@@ -47,7 +44,6 @@ export const infraProjects: Project[] = [
     title: 'port-tracker',
     summary: 'Personal investment portfolio + net worth tracker.',
     stack: ['TypeScript', 'Tracking', 'Dashboards'],
-    link: 'https://github.com/lawncegoh/port-tracker',
     status: 'Active'
   }
 ];

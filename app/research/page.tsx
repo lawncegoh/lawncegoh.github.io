@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export const metadata = {
   title: 'Research'
 };
@@ -26,16 +24,6 @@ export default function ResearchPage() {
             <span className="font-medium text-foreground">-39.3%</span> max drawdown over the sampled period (see repo
             artifacts).
           </p>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm">
-            <Link
-              className="text-primary underline-offset-4 hover:underline"
-              href="https://github.com/lawncegoh/crypto_dispersion"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View research repo →
-            </Link>
-          </div>
         </div>
 
         <div className="rounded-2xl border border-border/60 bg-card/60 p-5">

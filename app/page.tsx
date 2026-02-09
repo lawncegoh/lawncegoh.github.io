@@ -4,6 +4,7 @@ import { buttonClassName } from '@/components/ui/button';
 import { NoteCard } from '@/components/note-card';
 import { ProjectsGrid } from '@/components/projects/projects-grid';
 import { formatDate } from '@/lib/format-date';
+import { getMemoryEntries, getNotes } from '@/lib/content';
 import { tradingProjects } from '@/data/projects';
 
 export default function HomePage() {
@@ -16,7 +17,7 @@ export default function HomePage() {
         <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Digital Garden</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Quant Engineer building trading systems</h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Im Lawnce Goh  a Quantitative Engineer at Goldman Sachs. This is a digital garden of projects and notes on
+          I’m Lawnce Goh — a Quantitative Engineer at Goldman Sachs. This is a digital garden of projects and notes on
           execution/pricing pipelines, volatility research, and applied ML.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
