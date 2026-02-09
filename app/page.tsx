@@ -4,8 +4,7 @@ import { buttonClassName } from '@/components/ui/button';
 import { NoteCard } from '@/components/note-card';
 import { ProjectsGrid } from '@/components/projects/projects-grid';
 import { formatDate } from '@/lib/format-date';
-import { getMemoryEntries, getNotes } from '@/lib/content';
-import { projects } from '@/data/projects';
+import { tradingProjects } from '@/data/projects';
 
 export default function HomePage() {
   const notes = getNotes().slice(0, 3);
@@ -15,17 +14,17 @@ export default function HomePage() {
     <div className="space-y-12">
       <section className="rounded-2xl border border-border/70 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-8 text-center shadow-lg">
         <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Digital Garden</p>
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Mapping long-term curiosity</h1>
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Quant Engineer building trading systems</h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Notes, projects, and a running memory log documenting the experiments of Lawnce Goh. Everything lives in MDX,
-          versioned, and ready to remix.
+          Im Lawnce Goh  a Quantitative Engineer at Goldman Sachs. This is a digital garden of projects and notes on
+          execution/pricing pipelines, volatility research, and applied ML.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Link href="/notes" className={buttonClassName({ variant: 'primary' })}>
-            Browse notes
+          <Link href="/projects" className={buttonClassName({ variant: 'primary' })}>
+            Browse projects
           </Link>
-          <Link href="/memory" className={buttonClassName({ variant: 'outline' })}>
-            Read the memory log
+          <Link href="/research" className={buttonClassName({ variant: 'outline' })}>
+            Read research notes
           </Link>
         </div>
       </section>
@@ -74,7 +73,7 @@ export default function HomePage() {
             Projects →
           </Link>
         </div>
-        <ProjectsGrid projects={projects} />
+        <ProjectsGrid projects={tradingProjects.slice(0, 2)} />
       </section>
     </div>
   );

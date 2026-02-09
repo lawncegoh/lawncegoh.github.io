@@ -8,11 +8,13 @@ import { ThemeToggle } from './theme-toggle';
 
 const links = [
   { href: '/', label: 'Home' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/research', label: 'Research' },
   { href: '/notes', label: 'Notes' },
   { href: '/memory', label: 'Memory' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/accolades', label: 'Accolades' }
+  { href: '/cv', label: 'CV' },
+  { href: '/contact', label: 'Contact' }
 ];
 
 export function SiteHeader() {

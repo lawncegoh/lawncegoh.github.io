@@ -1,22 +1,54 @@
 import type { Project } from '@/components/projects/projects-grid';
 
-export const projects: Project[] = [
+export const tradingProjects: Project[] = [
   {
-    title: 'Atlas Signals',
-    summary: 'An observability layer that normalizes telemetry from hardware experiments into searchable signals.',
-    stack: ['Next.js', 'tRPC', 'Edge Functions'],
+    title: 'crypto_dispersion (vol research workbench)',
+    summary:
+      'Systematic research sandbox for volatility / breakout-style strategies, grid-search, and robustness checks (Monte Carlo).',
+    stack: ['Rust', 'Python', 'Backtesting', 'Monte Carlo'],
+    link: 'https://github.com/lawncegoh/crypto_dispersion',
+    status: 'Active'
+  },
+  {
+    title: 'HFT Order Book (C++ + Python wrapper)',
+    summary: 'A low-latency limit order book implementation with a Python wrapper for experimentation.',
+    stack: ['C++', 'Python', 'Market microstructure'],
     link: 'https://github.com/lawncegoh',
-    status: 'Shipping'
+    status: 'Open-source'
   },
   {
-    title: 'Drift Garden',
-    summary: 'Generative essays and watercolor renders composed from note graphs and memory fragments.',
-    stack: ['MDX', 'D3.js', 'Cloudflare Workers'],
-    status: 'Exploring'
-  },
-  {
-    title: 'Studio Twelve',
-    summary: 'Client workbench for high-touch research collaborations with live notebooks and async briefing packs.',
-    stack: ['React', 'Supabase', 'Postgres']
+    title: 'QuantConnect Lean (fork)',
+    summary: 'Explorations using Leans algorithmic trading engine patterns (research  backtest  deploy).',
+    stack: ['C#', 'Python', 'Lean'],
+    link: 'https://github.com/lawncegoh',
+    status: 'Learning'
   }
 ];
+
+export const mlProjects: Project[] = [
+  {
+    title: 'Earnings Call Reverse RAG',
+    summary:
+      'Trace AI-generated questions back to source transcript sentences using embeddings + vector search for attribution.',
+    stack: ['LangChain', 'SentenceTransformers', 'FAISS'],
+    status: 'Prototype'
+  },
+  {
+    title: 'Crypto Low Cap Coin Trading Bot (sentiment + features)',
+    summary:
+      'KOL tracking + FinBERT sentiment aggregation + XGBoost features for hold-time modelling and signal scoring.',
+    stack: ['Python', 'FinBERT', 'XGBoost'],
+    status: 'Prototype'
+  }
+];
+
+export const infraProjects: Project[] = [
+  {
+    title: 'port-tracker',
+    summary: 'Personal investment portfolio + net worth tracker.',
+    stack: ['TypeScript', 'Tracking', 'Dashboards'],
+    link: 'https://github.com/lawncegoh/port-tracker',
+    status: 'Active'
+  }
+];
+
