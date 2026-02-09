@@ -7,13 +7,13 @@ import { ThemeProvider } from '@/components/providers/theme-provider';
 export const metadata: Metadata = {
   metadataBase: new URL('https://lawncegoh.github.io'),
   title: {
-    default: 'Lawrence Goh — Digital Garden',
-    template: '%s · Lawrence Goh'
+    default: 'Lawnce Goh — Digital Garden',
+    template: '%s · Lawnce Goh'
   },
   description:
-    'A dark digital garden for Lawrence Goh that collects notes, projects, and a living memory timeline.',
-  keywords: ['Lawrence Goh', 'digital garden', 'notes', 'projects'],
-  authors: [{ name: 'Lawrence Goh' }]
+    'A dark digital garden for Lawnce Goh that collects notes, projects, and a living memory timeline.',
+  keywords: ['Lawnce Goh', 'digital garden', 'notes', 'projects'],
+  authors: [{ name: 'Lawnce Goh' }]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </main>
             <footer className="border-t border-border px-4 py-6 text-sm text-muted-foreground sm:px-6">
               <div className="container mx-auto max-w-5xl flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                <span>© {new Date().getFullYear()} Lawrence Goh</span>
+                <span>© {new Date().getFullYear()} Lawnce Goh</span>
                 <span className="text-xs">Crafted with Next.js, Tailwind, and MDX.</span>
               </div>
             </footer>

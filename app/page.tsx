@@ -17,7 +17,7 @@ export default function HomePage() {
         <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Digital Garden</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Mapping long-term curiosity</h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Notes, projects, and a running memory log documenting the experiments of Lawrence Goh. Everything lives in MDX,
+          Notes, projects, and a running memory log documenting the experiments of Lawnce Goh. Everything lives in MDX,
           versioned, and ready to remix.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
