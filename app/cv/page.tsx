@@ -11,22 +11,28 @@ export default function CvPage() {
       </div>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">Goldman Sachs  Quantitative Engineer (Associate)</h2>
-        <p className="text-sm text-muted-foreground">May 2022  Present</p>
+        <h2 className="text-2xl font-semibold">Goldman Sachs — Quantitative Strategist (Associate)</h2>
+        <p className="text-sm text-muted-foreground">May 2022 — Jan 2026</p>
         <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
           <li>
-            Built end-to-end FIX flows for equity-linked products (FIX protocol  Java microservice processor  pricing
-            integration), increasing trade volume from a key client.
+            Led an end-to-end OTC client FIX flow for equity-linked products (FIX protocol → Java microservice processor →
+            GS Slang-connected pricing), driving a 150% increase in trades from the client.
           </li>
           <li>
-            Designed cloud ingestion + feature engineering pipelines for structured product pricing data using MongoDB, S3,
-            Airflow (EC2), and Python transformations.
+            Built pricing data ingestion for structured products: stored product datasets in MongoDB via scheduled jobs and
+            persisted curated datasets to AWS S3 for redundancy and downstream consumption.
           </li>
           <li>
-            Developed analytics pipelines + Superset dashboards to monitor turnaround time and error distributions across
-            distribution channels.
+            Orchestrated feature engineering workflows using Apache Airflow on EC2, running Python transformations for
+            normalization and dimensionality reduction, improving ML prediction stability by ~50%.
           </li>
-          <li>Helped maintain Kafka streaming pipelines with secure access controls and archival to S3.</li>
+          <li>
+            Developed analytics pipelines and Superset dashboards to monitor turnaround time and error distributions across
+            distribution channels; metrics used to forecast customer flow and support deal execution.
+          </li>
+          <li>
+            Helped maintain Kafka streaming for microservices with IAM-based access control and archival to S3.
+          </li>
         </ul>
       </section>
 
@@ -34,11 +40,10 @@ export default function CvPage() {
         <h2 className="text-2xl font-semibold">Education</h2>
         <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
           <li>
-            NUS  MSc Statistics (May 2024  Present): applied statistical learning, NLP, time series, finance methods.
+            NUS — MSc Statistics (May 2024 — Present): applied statistical learning, NLP, time series, finance methods.
           </li>
           <li>
-            NUS  BComp Computer Science (AI specialisation) (2018  2022): ML foundations, big data systems, CV,
-            ethics.
+            NUS — BComp Computer Science (AI specialisation) (2018 — 2022): ML foundations, big data systems, CV, ethics.
           </li>
         </ul>
       </section>
@@ -51,7 +56,7 @@ export default function CvPage() {
       </section>
 
       <section className="rounded-2xl border border-border/60 bg-card/60 p-5 text-sm text-muted-foreground">
-        Want the PDF version here as a download button? Tell me what email/phone (if any) you want public, and Ill wire it
+        Want the PDF version here as a download button? Tell me what email/phone (if any) you want public, and I’ll wire it
         in.
       </section>
     </div>
