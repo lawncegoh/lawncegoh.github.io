@@ -49,10 +49,36 @@ export default function CvPage() {
       </section>
 
       <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Notable projects</h2>
+        <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+          <li>
+            <span className="font-medium text-foreground">Earnings call “Reverse RAG”</span> — traced AI-generated
+            questions back to source transcript sentences using LangChain chunking, SentenceTransformers embeddings, and a
+            FAISS index.
+          </li>
+          <li>
+            <span className="font-medium text-foreground">Real estate niche CRM</span> — Dockerized React + Express +
+            Postgres stack with API-based channel integrations (WhatsApp/Instagram/Facebook) and workflow automation via
+            n8n; experimented with self-hosted Llama3-8B for lead query replies.
+          </li>
+          <li>
+            <span className="font-medium text-foreground">Crypto low-cap trading bot</span> — tracked KOL posts, scored
+            sentiment with FinBERT, and used XGBoost features (market cap, volume, volatility) to inform holding time.
+          </li>
+        </ul>
+      </section>
+
+      <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Technical skills (selected)</h2>
         <p className="text-sm text-muted-foreground">
-          Python, Java, TypeScript, SQL, AWS (EC2/S3/IAM), Docker, Kafka, Airflow, MongoDB, Postgres, Superset.
+          Python, Java, JavaScript/TypeScript, Rust, SQL, R; AWS (EC2/S3/IAM); Docker; Kafka; Airflow; Superset; MongoDB;
+          Postgres; PyTorch; Hugging Face; FAISS; n8n.
         </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Certification</h2>
+        <p className="text-sm text-muted-foreground">H2O Generative AI Track</p>
       </section>
 
       <section className="rounded-2xl border border-border/60 bg-card/60 p-5 text-sm text-muted-foreground">
