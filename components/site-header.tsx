@@ -12,7 +12,6 @@ const links = [
   { href: '/projects', label: 'Projects' },
   { href: '/research', label: 'Research' },
   { href: '/notes', label: 'Notes' },
-  { href: '/memory', label: 'Memory' },
   { href: '/cv', label: 'CV' }
 ];
 

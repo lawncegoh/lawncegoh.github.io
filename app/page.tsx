@@ -3,13 +3,11 @@ import Link from 'next/link';
 import { buttonClassName } from '@/components/ui/button';
 import { NoteCard } from '@/components/note-card';
 import { ProjectsGrid } from '@/components/projects/projects-grid';
-import { formatDate } from '@/lib/format-date';
-import { getMemoryEntries, getNotes } from '@/lib/content';
+import { getNotes } from '@/lib/content';
 import { tradingProjects } from '@/data/projects';
 
 export default function HomePage() {
   const notes = getNotes().slice(0, 3);
-  const memories = getMemoryEntries().slice(0, 3);
 
   return (
     <div className="space-y-12">
@@ -44,28 +42,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-semibold">Recent memories</h2>
-          <Link href="/memory" className="text-sm text-muted-foreground hover:text-primary">
-            Timeline →
-          </Link>
-        </div>
-        <div className="space-y-4">
-          {memories.map((memory) => (
-            <div key={memory.slug} className="rounded-2xl border border-border/60 bg-card/60 p-4">
-              <div className="flex flex-wrap justify-between text-xs uppercase tracking-wide text-muted-foreground">
-                <span>{formatDate(memory.created)}</span>
-                <span>{memory.tags.map((tag) => `#${tag}`).join(' ')}</span>
-              </div>
-              <Link href={`/memory/${memory.slug}`} className="mt-2 inline-flex text-lg font-semibold hover:underline">
-                {memory.title}
-              </Link>
-              <p className="text-sm text-muted-foreground">{memory.summary}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      
 
       <section className="space-y-4">
         <div className="flex items-center justify-between">

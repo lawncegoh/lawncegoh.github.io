@@ -1,0 +1,58 @@
+---
+title: "Rust: First pair that sums to target (O(n))"
+tags: ["rust", "algorithms", "hashmap"]
+created: "2026-02-13"
+updated: "2026-02-13"
+summary: "A quick pattern for finding the first pair whose sum hits a target in one pass."
+---
+
+## Problem
+
+Given a list of integers, return the **first** pair (by scan order) whose sum equals a target.
+
+- “First” here means: scanning left → right, return the first time you can form a valid pair where the **second element** is the current element.
+- Target complexity: **O(n)** time.
+
+## Approach (one pass)
+
+Maintain a set of values you’ve already seen.
+
+For each `x`:
+
+1. compute `need = target - x`
+2. if `need` is already in `seen`, you found the first pair `(need, x)`
+3. otherwise insert `x` into `seen`
+
+## Rust example
+
+```rust
+use std::collections::HashSet;
+
+fn first_pair_sum(xs: &[i64], target: i64) -> Option<(i64, i64)> {
+    let mut seen: HashSet<i64> = HashSet::new();
+
+    for &x in xs {
+        // If you want to be extra safe about overflow:
+        // let need = target.checked_sub(x)?;
+        let need = target - x;
+
+        if seen.contains(&need) {
+            return Some((need, x));
+        }
+
+        seen.insert(x);
+    }
+
+    None
+}
+
+fn main() {
+    let xs = [3, 1, 7, 9, 2];
+    assert_eq!(first_pair_sum(&xs, 10), Some((1, 9)));
+}
+```
+
+## Notes
+
+- This returns a pair of **values**. If you need indices, store index in a `HashMap<i64, usize>` instead.
+- Default Rust `HashSet/HashMap` is secure (SipHash). Switch only if you actually hit performance bottlenecks.
