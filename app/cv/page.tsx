@@ -68,12 +68,50 @@ export default function CvPage() {
         </ul>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">Technical skills (selected)</h2>
-        <p className="text-sm text-muted-foreground">
-          Python, Java, JavaScript/TypeScript, Rust, SQL, R; AWS (EC2/S3/IAM); Docker; Kafka; Airflow; Superset; MongoDB;
-          Postgres; PyTorch; Hugging Face; FAISS; n8n.
-        </p>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Technical skills</h2>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium text-foreground">Languages</h3>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+              <li>Python</li>
+              <li>Java</li>
+              <li>TypeScript / JavaScript</li>
+              <li>Rust</li>
+              <li>SQL</li>
+              <li>R</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium text-foreground">Data / ML</h3>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+              <li>PyTorch, Hugging Face</li>
+              <li>FAISS</li>
+              <li>Feature engineering + backtesting</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium text-foreground">Infra / tooling</h3>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+              <li>AWS (EC2, S3, IAM)</li>
+              <li>Docker</li>
+              <li>Kafka</li>
+              <li>MongoDB, Postgres</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium text-foreground">Analytics / automation</h3>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+              <li>Airflow</li>
+              <li>Superset</li>
+              <li>n8n</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section className="space-y-3">

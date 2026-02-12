@@ -13,8 +13,7 @@ const links = [
   { href: '/research', label: 'Research' },
   { href: '/notes', label: 'Notes' },
   { href: '/memory', label: 'Memory' },
-  { href: '/cv', label: 'CV' },
-  { href: '/contact', label: 'Contact' }
+  { href: '/cv', label: 'CV' }
 ];
 
 export function SiteHeader() {

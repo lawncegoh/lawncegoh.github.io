@@ -27,9 +27,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
             </main>
             <footer className="border-t border-border px-4 py-6 text-sm text-muted-foreground sm:px-6">
-              <div className="container mx-auto max-w-5xl flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div className="container mx-auto max-w-5xl flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <span>© {new Date().getFullYear()} Lawnce Goh</span>
-                <span className="text-xs">Crafted with Next.js, Tailwind, and MDX.</span>
+                <div className="flex flex-col gap-1 text-xs sm:items-end">
+                  <div className="flex flex-wrap gap-x-3 gap-y-1">
+                    <a
+                      className="text-primary underline-offset-4 hover:underline"
+                      href="https://github.com/lawncegoh"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GitHub
+                    </a>
+                    <a
+                      className="text-primary underline-offset-4 hover:underline"
+                      href="https://www.linkedin.com/in/lawnce-goh/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
+                  <span className="text-muted-foreground">Crafted with Next.js, Tailwind, and MDX.</span>
+                </div>
               </div>
             </footer>
           </div>
