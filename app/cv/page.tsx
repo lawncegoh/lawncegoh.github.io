@@ -7,8 +7,7 @@ export default function CvPage() {
     <div className="space-y-8">
       <div className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">CV</h1>
-        <p className="text-muted-foreground">Highlights pulled from my resume. (Full PDF available on request.)</p>
-      </div>
+              </div>
 
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Goldman Sachs — Quantitative Strategist (Associate)</h2>
