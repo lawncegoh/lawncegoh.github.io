@@ -1,0 +1,66 @@
+---
+title: "Python: Longest consecutive-day activity streak per user"
+tags: ["python", "algorithms", "datetime", "hashmap"]
+created: "2026-02-16"
+updated: "2026-02-16"
+summary: "Compute each user’s longest consecutive-day streak from event logs in O(n log n) per user (or near O(n) with set-walk variant)."
+---
+
+## Problem
+
+Given event logs where each row is:
+
+`user_id,timestamp,event`
+
+Compute, for each user, the length of their **longest consecutive-day streak** with at least one event.
+
+## Key idea
+
+For each user:
+
+1. Convert timestamps to calendar dates.
+2. Deduplicate dates (`set`) so multiple events on the same day count once.
+3. Sort unique dates.
+4. Scan once and count streaks where `(d2 - d1).days == 1`.
+
+## Python snippet
+
+```python
+from collections import defaultdict
+from datetime import datetime
+
+
+def longest_streak(dates):
+    dates = sorted(set(dates))
+    best = cur = 0
+    prev = None
+
+    for d in dates:
+        cur = cur + 1 if prev and (d - prev).days == 1 else 1
+        best = max(best, cur)
+        prev = d
+
+    return best
+
+
+def per_user_streaks(rows):
+    # rows: iterable[(user_id, timestamp_str, event)]
+    by_user = defaultdict(list)
+
+    for user_id, ts, _event in rows:
+        day = datetime.fromisoformat(ts).date()
+        by_user[user_id].append(day)
+
+    return {u: longest_streak(days) for u, days in by_user.items()}
+```
+
+## Complexity
+
+- Let `k` = number of unique active days for a user.
+- Per user: `O(k log k)` for sort + `O(k)` scan.
+- Memory: `O(k)`.
+
+## Notes
+
+- If timestamps are UTC but streaks should be local-time, convert timezone before taking `.date()`.
+- For very large datasets, pre-aggregate by `(user_id, date)` upstream before computing streaks.
