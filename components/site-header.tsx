@@ -11,8 +11,7 @@ const links = [
   { href: '/experience', label: 'Experience' },
   { href: '/projects', label: 'Projects' },
   { href: '/research', label: 'Research' },
-  { href: '/notes', label: 'Notes' },
-  { href: '/cv', label: 'CV' }
+  { href: '/notes', label: 'Notes' }
 ];
 
 export function SiteHeader() {
