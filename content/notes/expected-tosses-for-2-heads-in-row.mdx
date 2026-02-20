@@ -1,0 +1,95 @@
+---
+title: "Expected Tosses Until Two Heads in a Row"
+tags: ["probability", "interview", "markov-chains", "expectation"]
+created: "2026-02-20"
+updated: "2026-02-20"
+summary: "A clean derivation for E[T] where T is the number of fair coin tosses needed to see HH, using Markov states and a short generating-function/fancy expectation route."
+---
+
+## Problem
+
+For a fair coin, what is the expected number of tosses to get **two consecutive heads** (HH)?
+
+## 1) Markov chain derivation (classic)
+
+Define the state by current streak of consecutive heads:
+
+- `E0`: expected tosses to finish when there is no trailing head yet.
+- `E1`: expected tosses to finish when the last toss was `H`.
+- `E2`: target state (we already have HH), so `E2 = 0`.
+
+From each state, one toss is used first, then transition by chance:
+
+`E0 = 1 + 1/2 * E1 + 1/2 * E0`
+`E1 = 1 + 1/2 * E2 + 1/2 * E0`
+`E2 = 0`
+
+Solve:
+
+`E1 = 1 + 1/2 * E0`
+`E0 - 1/2 * E0 = 1 + E1`
+`1/2 * E0 = 1 + 1 + 1/2 * E0`
+`1/2 * E0 = 3`
+`E0 = 6`
+
+So the answer is:
+
+`E[T] = E0 = 6`
+
+## 2) Alternative "fancy" route (linearity of expectation)
+
+Use:
+
+`E[T] = sum_{n>=0} P(T > n)`
+
+`T > n` means no HH appears in first n tosses.
+Let `a_n` be count of length-n binary strings with no consecutive heads. Then:
+
+`a_n` follows `a_n = a_{n-1} + a_{n-2}`, with `a_0 = 1`, `a_1 = 2`.
+
+So `a_n = Fibonacci(n+2)`.
+
+`P(T > n) = a_n / 2^n`
+
+Hence:
+
+`E[T] = sum_{n>=0} a_n / 2^n`
+
+Using the generating function for shifted Fibonacci numbers,
+`sum_{n>=0} Fib(n+2) x^n = (1+x)/(1-x-x^2)`.
+At `x = 1/2`:
+
+`E[T] = (1 + 1/2) / (1 - 1/2 - 1/4) = 6`
+
+## 3) Quick intuition
+
+- Tail is a reset for head streak progress.
+- Heads moves you one step closer.
+- That tug-of-war gives an expectation larger than 2 but exactly 6 by steady-state balance.
+
+## Code check (quick simulation)
+
+```python
+import random
+
+
+def runsim(trials=200_000):
+    total = 0
+    for _ in range(trials):
+        streak = 0
+        tosses = 0
+        while True:
+            tosses += 1
+            if random.random() < 0.5:
+                streak += 1
+                if streak == 2:
+                    break
+            else:
+                streak = 0
+        total += tosses
+    return total / trials
+
+print(runsim())
+```
+
+Should be close to 6 for a fair coin.
