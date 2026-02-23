@@ -1,0 +1,115 @@
+---
+title: "Monday, 23 February 2026 — Daily 7AM Probability + Statistics Brief"
+tags: ["probability", "statistics", "interview-prep", "algorithms"]
+created: "2026-02-23"
+updated: "2026-02-23"
+summary: "A practical probability/statistics brief covering Bayesian updates, hypothesis interpretation, and two quick algorithm exercises with implementation guidance."
+---
+
+## Title
+
+**Bayesian Updates, False Confidence, and a Cleaner Way to Think in Ratios**
+
+## Core Notes
+
+### 1) Know what changed: from absolute to conditional
+
+In practice, uncertainty questions are almost always about: _given what I observed, what should I believe now?_
+
+Use conditional probability as default:
+
+- compare base rate
+- compare likelihood under each hypothesis
+- normalize
+
+This avoids the common mistake of treating a rare event as common just because a detector has high sensitivity.
+
+### 2) Use Bayes in real life, not just theory
+
+For binary workflows (spam, alerts, triage, hiring), update posterior odds by multiplying prior odds by likelihood ratio.
+
+If inputs are percentages, convert to probabilities and use:
+
+`P(H|E) = P(E|H) * P(H) / P(E)`
+
+This is often faster than retraining a model just to check a live decision.
+
+### 3) Check concentration before trusting precision
+
+Sample-based means can move a lot on small `n`.
+
+Before trusting a result, always check:
+
+- sample size
+- variability
+- uncertainty interval
+
+Confidence intervals describe repeatability over samples, not a promise about one single draw.
+
+### 4) Interpret p-values correctly
+
+A tiny p-value means the observed pattern is unusual under the null model.
+
+It is **not** proof the alternative is true. Pair it with effect size and uncertainty before acting.
+
+### 5) Define experiment rules before seeing outcomes
+
+Set these first:
+
+- success metric
+- minimum practical effect
+- acceptable false-positive tolerance
+
+That single step reduces post-hoc interpretation and keeps decisions repeatable.
+
+## Short worked micro-example
+
+A monitoring model flags fraud alerts:
+
+- Base fraud rate `P(Fraud) = 1%`
+- `P(Alert | Fraud) = 95%`
+- `P(Alert | No Fraud) = 2%`
+
+Given an account is alerted, compute `P(Fraud | Alert)`:
+
+`P(Alert) = P(Alert|Fraud) * P(Fraud) + P(Alert|No Fraud) * P(No Fraud)`
+
+`P(Alert) = 0.95 * 0.01 + 0.02 * 0.99 = 0.0293`
+
+`P(Fraud|Alert) = 0.0095 / 0.0293 ≈ 32.4%`
+
+So only about one-third of alerts are real, despite high sensitivity. Operationally, combine alerts with human review or secondary checks, not full automation.
+
+---
+
+## Quick Algo Problems
+
+### A) Subarray Sum Equals K
+
+**Problem:** Given integer array `nums` and integer `k`, return number of contiguous subarrays with sum exactly `k`.
+
+**Hints:**
+
+1. Use running prefix sum as you scan.
+2. For each element, find how many prior prefixes equal `current_prefix - k`.
+3. Keep prefix frequencies in a hash map.
+
+**Complexity:** `O(n)` time, `O(n)` space.
+
+### B) Top-K Frequent Elements
+
+**Problem:** Given list `nums` and integer `k`, return the `k` most frequent values.
+
+**Hints:**
+
+1. Count frequencies in a hash map.
+2. Keep a min-heap of size `k`.
+3. Push/pop as `(frequency, value)` while iterating the frequency map.
+
+**Complexity:** `O(n log k)` time, `O(n)` space.
+
+## Quick actions for the day
+
+1. Run one Bayes check on a real decision (email triage, bug triage, alert routing).
+2. Write one confidence-interval interpretation sentence from a report/chart you already used.
+3. Solve one of the two problems end-to-end in Python and include complexity reasoning.
